@@ -172,7 +172,7 @@ void CMD_PRINT(void){
 	uint8_t ackornack;
 	SPI_ReceiveData(SPI2, &ackornack, sizeof(ackornack));
 	if(ackornack==ACK){
-		char message[]="Mert cinerin gotunu sikeyim!!!";
+		char message[]="Mert cinerin !!!";
 		uint8_t len=strlen(message);
 		SPI_SendData(SPI2,&len,sizeof(len));
 		SPI_SendData(SPI2,(uint8_t*)message,strlen(message));
